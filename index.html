@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sweet Delights</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #111;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: black;
+    color: white;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: #f8d7e3;
+}
+
+/* Products */
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Custom Cakes */
+.custom {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+button {
+    background: #ff4fa3;
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Sweet Delights</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Delicious Treats Made With Love</h2>
+    <p>Baked fresh for every order</p>
+</section>
+
+<section class="products">
+    <div class="card">Cookie Pies</div>
+    <div class="card">Brownies</div>
+    <div class="card">Tray Bake Cakes</div>
+    <div class="card">Cookies</div>
+</section>
+
+<section class="custom">
+    <h2>Custom Cakes</h2>
+    <p>Prices from £65</p>
+    <p>*Price varies depending on size and detail of the cake</p>
+    <button>Email for a quote</button>
+</section>
+
+<footer>
+    <p>Email: info@yourbakery.com</p>
+</footer>
+
+</body>
+</html>
