@@ -8,68 +8,121 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #fff;
     color: #111;
 }
 
-/* Header */
+/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    background: black;
-    color: white;
+    align-items: center;
+    padding: 20px 40px;
+    background: #000;
+    color: #fff;
 }
 
 nav a {
-    color: white;
-    margin-left: 20px;
+    margin-left: 25px;
     text-decoration: none;
+    color: white;
+    font-size: 14px;
 }
 
-/* Hero */
+/* HERO */
 .hero {
-    text-align: center;
-    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 40px;
     background: #f8d7e3;
 }
 
-/* Products */
-.products {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 40px;
+.hero-text {
+    max-width: 500px;
 }
 
-.card {
-    background: #f4f4f4;
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
-/* Custom Cakes */
-.custom {
-    background: black;
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
+.hero span {
+    color: #ff4fa3;
 }
 
-button {
+.hero p {
+    margin-bottom: 20px;
+}
+
+.hero button {
     background: #ff4fa3;
     border: none;
     padding: 12px 20px;
     color: white;
     cursor: pointer;
-    border-radius: 5px;
 }
 
-/* Footer */
+.hero img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* PRODUCTS */
+.products {
+    padding: 60px 40px;
+}
+
+.products h2 {
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-top: 10px;
+}
+
+/* CUSTOM CAKES */
+.custom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 40px;
+    background: #000;
+    color: white;
+}
+
+.custom-text {
+    max-width: 400px;
+}
+
+.custom button {
+    background: #ff4fa3;
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.custom img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
 }
 </style>
 
@@ -87,22 +140,48 @@ footer {
 </header>
 
 <section class="hero">
-    <h2>Delicious Treats Made With Love</h2>
-    <p>Baked fresh for every order</p>
+    <div class="hero-text">
+        <h2>Delicious Treats Made With <span>Love</span></h2>
+        <p>Baked fresh for every order</p>
+        <button>View Our Treats</button>
+    </div>
+    <img src="brownie.jpg">
 </section>
 
 <section class="products">
-    <div class="card">Cookie Pies</div>
-    <div class="card">Brownies</div>
-    <div class="card">Tray Bake Cakes</div>
-    <div class="card">Cookies</div>
+    <h2>Our Treats</h2>
+
+    <div class="grid">
+        <div class="card">
+            <img src="cookiepie.jpg">
+            <h3>Cookie Pies</h3>
+        </div>
+
+        <div class="card">
+            <img src="brownie.jpg">
+            <h3>Brownies</h3>
+        </div>
+
+        <div class="card">
+            <img src="traybake.jpg">
+            <h3>Tray Bake Cakes</h3>
+        </div>
+
+        <div class="card">
+            <img src="cookie.jpg">
+            <h3>Cookies</h3>
+        </div>
+    </div>
 </section>
 
 <section class="custom">
-    <h2>Custom Cakes</h2>
-    <p>Prices from £65</p>
-    <p>*Price varies depending on size and detail of the cake</p>
-    <button>Email for a quote</button>
+    <div class="custom-text">
+        <h2>Custom Cakes</h2>
+        <p>Prices from £65</p>
+        <p>*Price varies depending on size and detail</p>
+        <button>Email for a quote</button>
+    </div>
+    <img src="cake.jpg">
 </section>
 
 <footer>
