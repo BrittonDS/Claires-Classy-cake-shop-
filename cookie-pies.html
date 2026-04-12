@@ -1,9 +1,9 @@
-<div style="display:flex; gap:24px; flex-wrap:wrap; font-family:'Inter',sans-serif;">
+<div class="products">
 
-  <!-- PRODUCT CARD -->
+  <!-- Nutella -->
   <div class="product-card">
     <div class="img-wrap">
-      <img src="nutella.jpg" alt="Nutella Cookie Pie">
+      <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80" alt="Nutella Cookie Pie">
       <div class="badge">Bestseller</div>
     </div>
 
@@ -14,15 +14,15 @@
 
       <div class="bottom">
         <strong>£15</strong>
-        <button onclick="window.location.href='YOUR_SUMUP_LINK_HERE'">Buy Now</button>
+        <button onclick="window.location.href='YOUR_SUMUP_LINK'">Buy Now</button>
       </div>
     </div>
   </div>
 
-  <!-- BISCOFF -->
+  <!-- Biscoff -->
   <div class="product-card">
     <div class="img-wrap">
-      <img src="biscoff.jpg" alt="Biscoff Cookie Pie">
+      <img src="https://images.unsplash.com/photo-1612197527995-3c4d5c3a4a2b?auto=format&fit=crop&w=800&q=80" alt="Biscoff Cookie Pie">
     </div>
 
     <div class="product-info">
@@ -32,33 +32,33 @@
 
       <div class="bottom">
         <strong>£15</strong>
-        <button onclick="window.location.href='YOUR_SUMUP_LINK_HERE'">Buy Now</button>
+        <button onclick="window.location.href='YOUR_SUMUP_LINK'">Buy Now</button>
       </div>
     </div>
   </div>
 
-  <!-- KINDERELLA -->
+  <!-- Kinderella -->
   <div class="product-card">
     <div class="img-wrap">
-      <img src="kinderella.jpg" alt="Kinderella Cookie Pie">
+      <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80" alt="Kinderella Cookie Pie">
     </div>
 
     <div class="product-info">
       <span class="category">Luxury Bake</span>
       <h3>Kinderella Cookie Pie</h3>
-      <p>Chocolate cookie pie filled with creamy Kinder-style hazelnut goodness.</p>
+      <p>Chocolate cookie pie filled with creamy hazelnut goodness.</p>
 
       <div class="bottom">
         <strong>£15</strong>
-        <button onclick="window.location.href='YOUR_SUMUP_LINK_HERE'">Buy Now</button>
+        <button onclick="window.location.href='YOUR_SUMUP_LINK'">Buy Now</button>
       </div>
     </div>
   </div>
 
-  <!-- FUNFETTI -->
+  <!-- Funfetti -->
   <div class="product-card">
     <div class="img-wrap">
-      <img src="funfetti.jpg" alt="Funfetti Cookie Pie">
+      <img src="https://images.unsplash.com/photo-1599785209707-28c2c0cbb0b7?auto=format&fit=crop&w=800&q=80" alt="Funfetti Cookie Pie">
     </div>
 
     <div class="product-info">
@@ -68,15 +68,15 @@
 
       <div class="bottom">
         <strong>£15</strong>
-        <button onclick="window.location.href='YOUR_SUMUP_LINK_HERE'">Buy Now</button>
+        <button onclick="window.location.href='YOUR_SUMUP_LINK'">Buy Now</button>
       </div>
     </div>
   </div>
 
-  <!-- DOUBLE CHOCOLATE -->
+  <!-- Double Chocolate -->
   <div class="product-card">
     <div class="img-wrap">
-      <img src="doublechoc.jpg" alt="Double Chocolate Cookie Pie">
+      <img src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa?auto=format&fit=crop&w=800&q=80" alt="Double Chocolate Cookie Pie">
     </div>
 
     <div class="product-info">
@@ -86,7 +86,7 @@
 
       <div class="bottom">
         <strong>£15</strong>
-        <button onclick="window.location.href='YOUR_SUMUP_LINK_HERE'">Buy Now</button>
+        <button onclick="window.location.href='YOUR_SUMUP_LINK'">Buy Now</button>
       </div>
     </div>
   </div>
@@ -94,61 +94,67 @@
 </div>
 
 <style>
+.products {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-family: 'Inter', sans-serif;
+}
+
 .product-card {
-  max-width: 300px;
+  width: 280px;
   background: #fff;
-  border-radius: 28px;
+  border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 12px 30px rgba(0,0,0,0.06);
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .img-wrap {
-  position: relative;
-  height: 240px;
+  height: 220px;
   overflow: hidden;
+  position: relative;
 }
 
 .img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .badge {
   position: absolute;
-  top: 14px;
-  left: 14px;
-  background: rgba(255,255,255,0.95);
-  padding: 6px 14px;
+  top: 12px;
+  left: 12px;
+  background: white;
+  padding: 5px 12px;
   border-radius: 999px;
   font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .product-info {
-  padding: 20px;
+  padding: 18px;
 }
 
 .category {
   font-size: 11px;
   letter-spacing: 0.15em;
-  text-transform: uppercase;
   color: #888;
+  text-transform: uppercase;
 }
 
 .product-info h3 {
   font-family: 'Playfair Display', serif;
-  margin: 8px 0;
-  font-size: 20px;
+  font-size: 18px;
+  margin: 6px 0;
 }
 
 .product-info p {
-  font-size: 14px;
+  font-size: 13px;
   color: #666;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .bottom {
@@ -158,13 +164,13 @@
 }
 
 button {
-  padding: 10px 18px;
+  padding: 8px 16px;
   border-radius: 999px;
   border: none;
   background: #111;
   color: #fff;
-  font-size: 13px;
   cursor: pointer;
+  font-size: 12px;
 }
 
 button:hover {
@@ -172,8 +178,7 @@ button:hover {
 }
 
 .product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 45px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
 }
 
 .product-card:hover img {
