@@ -1,19 +1,41 @@
-<div class="product-card">
-  <div class="product-image">
-    <img src="cookiepie.jpg" alt="Nutella Cookie Pie">
+<div class="product-card" style="max-width: 320px; margin: 0 auto;">
+
+  <div style="position: relative; width: 100%; height: 260px; overflow: hidden; border-radius: 28px 28px 0 0;">
     
-    <div class="badge">Bestseller</div>
+    <img src="cookiepie.jpg" alt="Nutella Cookie Pie"
+      style="width: 100%; height: 260px; object-fit: cover; display: block;">
+    
+    <div style="
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(255,255,255,0.9);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    ">
+      Bestseller
+    </div>
+
   </div>
 
   <div class="product-info">
     <span>Luxury Bake</span>
+
     <h3>Nutella Cookie Pie</h3>
+
     <p>
-      A thick, golden cookie pie with a molten Nutella centre,
-      finished with a soft, indulgent texture and rich chocolate flavour.
+      Thick cookie pie with a molten Nutella centre and rich chocolate flavour.
     </p>
 
-    <div class="product-bottom">
+    <div style="
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+    ">
       <strong>£15</strong>
 
       <button class="btn btn-primary"
@@ -22,4 +44,5 @@
       </button>
     </div>
   </div>
+
 </div>
