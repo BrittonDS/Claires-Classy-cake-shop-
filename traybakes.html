@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tray Bakes</title>
+<style>
+body{font-family:Arial;background:#f8f8f8}
+.container{width:90%;margin:auto;padding:40px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;padding:15px;border-radius:20px}
+img{width:100%;border-radius:15px}
+button{margin-top:10px}
+</style>
+</head>
 
+<body>
+<div class="container">
+<h1>Tray Bakes</h1>
+
+<div class="grid">
+  <div class="card">
+    <img src="traybake1.jpg">
+    <h3>Chocolate Tray Bake</h3>
+    <p>£4.00</p>
+    <button onclick="orderProduct('Chocolate Tray Bake')">Order</button>
+  </div>
+
+  <div class="card">
+    <img src="traybake2.jpg">
+    <h3>Vanilla Sprinkle Tray Bake</h3>
+    <p>£4.00</p>
+    <button onclick="orderProduct('Vanilla Sprinkle Tray Bake')">Order</button>
+  </div>
+</div>
+
+</div>
+
+<script>
+function orderProduct(productName){
+const subject="Order Enquiry";
+const body=`Hi, I would like to order:\n\n${productName}`;
+window.location.href=`mailto:clairesclassycakeshop@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+</script>
+
+</body>
+</html>
