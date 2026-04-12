@@ -786,6 +786,53 @@ function orderProduct(productName) {
 }
 </script>
 
+
+  <div class="modal" id="orderModal">
+  <div class="modal-box">
+    <button class="close" onclick="closeOrderModal()">✕</button>
+
+    <h3>Delivery Details</h3>
+    <p>Please enter your delivery information before checkout.</p>
+
+    <div class="form-grid">
+      <input type="text" id="orderName" placeholder="Full Name">
+      <input type="text" id="orderPhone" placeholder="Phone Number">
+
+      <input type="text" id="orderAddress" class="full" placeholder="Full Address">
+      <input type="text" id="orderPostcode" placeholder="Postcode">
+
+      <input type="date" id="orderDate">
+
+      <button class="btn btn-primary full" onclick="goToPayment()">
+        Continue to Payment
+      </button>
+    </div>
+  </div>
+</div>
+
+  <div class="modal" id="orderModal">
+  <div class="modal-box">
+    <button class="close" onclick="closeOrderModal()">✕</button>
+
+    <h3>Delivery Details</h3>
+    <p>Please enter your delivery information before checkout.</p>
+
+    <div class="form-grid">
+      <input type="text" id="orderName" placeholder="Full Name">
+      <input type="text" id="orderPhone" placeholder="Phone Number">
+
+      <input type="text" id="orderAddress" class="full" placeholder="Full Address">
+      <input type="text" id="orderPostcode" placeholder="Postcode">
+
+      <input type="date" id="orderDate">
+
+      <button class="btn btn-primary full" onclick="goToPayment()">
+        Continue to Payment
+      </button>
+    </div>
+  </div>
+</div>
+
   
 
 </body>
