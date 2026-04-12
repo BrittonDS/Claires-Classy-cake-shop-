@@ -549,6 +549,876 @@
     box-shadow: 0 30px 60px rgba(0,0,0,0.08);
 }
 
+
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claire's Classy Cakes</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #111111;
+      --white: #ffffff;
+      --soft-white: #f8f8f8;
+      --baby-pink: #f4d8e2;
+      --baby-pink-dark: #e9bccd;
+      --grey: #6f6f6f;
+      --border: rgba(17,17,17,0.08);
+      --shadow: 0 30px 60px rgba(0,0,0,0.08);
+      --radius: 28px;
+      --transition: 0.35s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--soft-white);
+      color: var(--black);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(92%, 1400px);
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 0;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      background: var(--baby-pink-dark);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    /* Hero */
+.hero {
+    padding: 7rem 0 5rem;
+    margin-top: 20px;
+}
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--baby-pink);
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 0.95;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 span {
+      color: var(--baby-pink-dark);
+      font-style: italic;
+    }
+
+    .hero p {
+      color: var(--grey);
+      font-size: 1.1rem;
+      max-width: 560px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 1rem 1.8rem;
+      border-radius: 999px;
+      border: 1px solid var(--black);
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--baby-pink-dark);
+      border-color: var(--baby-pink-dark);
+      color: var(--black);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+    }
+
+    .btn-secondary:hover {
+      background: var(--baby-pink);
+      border-color: var(--baby-pink);
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+.hero-image img {
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 36px;
+    box-shadow: var(--shadow);
+    margin-left: auto;
+}
+
+    .floating-card {
+      position: absolute;
+      left: -30px;
+      bottom: 40px;
+      background: rgba(255,255,255,0.95);
+      padding: 1.4rem;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      max-width: 240px;
+    }
+
+    .floating-card strong {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 0.3rem;
+    }
+
+    /* Product Cards */
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+    }
+
+    .section-header p {
+      color: var(--grey);
+      max-width: 480px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow);
+    }
+
+    .product-card a {
+      display: block;
+    }
+
+    .product-card img {
+      height: 320px;
+    }
+
+    .product-info {
+      padding: 1.5rem;
+    }
+
+    .product-info h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .product-info p {
+      color: var(--grey);
+      margin-bottom: 1rem;
+    }
+
+    .product-info span {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--baby-pink-dark);
+    }
+
+    /* Custom cakes */
+    .luxury-banner {
+      background: linear-gradient(135deg, #111 0%, #1c1c1c 60%, #2d2d2d 100%);
+      color: white;
+      border-radius: 40px;
+      padding: 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .luxury-banner h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      margin-bottom: 1rem;
+    }
+
+    .luxury-banner h2 span {
+      color: var(--baby-pink-dark);
+      font-style: italic;
+    }
+
+    .luxury-banner p {
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 1.5rem;
+      max-width: 500px;
+    }
+
+    .price-tag {
+      display: inline-block;
+      background: var(--baby-pink);
+      color: var(--black);
+      padding: 0.8rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    .luxury-banner img {
+      height: 500px;
+      border-radius: 30px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    footer h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    footer p,
+    footer a {
+      color: var(--grey);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .copyright {
+      padding-top: 2rem;
+      color: var(--grey);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Modal */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      z-index: 2000;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: white;
+      width: min(100%, 700px);
+      border-radius: 32px;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .modal-box h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .close {
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .form-grid input,
+    .form-grid textarea,
+    .form-grid select {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1rem;
+      font-family: inherit;
+      background: var(--soft-white);
+    }
+
+    .form-grid textarea {
+      min-height: 140px;
+      resize: vertical;
+      grid-column: 1 / -1;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    /* Mobile */
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .luxury-banner,
+      .footer-grid,
+      .product-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-image img {
+        height: 520px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--border);
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hero,
+      .section,
+      footer {
+        padding: 3rem 0;
+      }
+
+      .hero-grid,
+      .product-grid,
+      .luxury-banner,
+      .footer-grid,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-image img,
+      .luxury-banner img {
+        height: 360px;
+      }
+
+      .floating-card {
+        position: static;
+        margin-top: 1rem;
+        max-width: 100%;
+      }
+
+      .luxury-banner {
+        padding: 2rem;
+      }
+
+      .modal-box {
+        padding: 1.5rem;
+      }
+    }
+
+    /* === HERO IMAGE FIX (OVERRIDE) === */
+
+.hero {
+    padding: 7rem 0 5rem;
+    margin-top: 20px;
+}
+
+.hero-grid {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 36px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+}
+
+    
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container navbar">
+      <a href="#" class="logo">Claire's Classy Cakes</a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#custom">Custom Cakes</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Luxury Handmade Desserts</div>
+        <h1>Elegant Cakes & Treats Crafted With <span>Style</span></h1>
+        <p>
+          Discover a premium collection of brownies, cookies, tray bakes and bespoke celebration cakes designed with luxury, flavour and unforgettable detail. NOTE: PLEASE ENTER YOUR DELIVERY ADRESS IN THE NOTES BOX DURING CHECKOUT
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#collection" class="btn btn-primary">Explore Collection</a>
+          <a href="#custom" class="btn btn-secondary">Order Custom Cake</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="weddingcake.jpg" 
+
+        <div class="floating-card">
+          <strong>From £65</strong>
+          Bespoke celebration cakes designed exclusively for your event.
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Our Signature Collection</h2>
+        </div>
+        <p>
+          Every product is handcrafted using premium ingredients and styled to reflect a refined, modern bakery experience.
+        </p>
+      </div>
+
+      <div class="product-grid">
+
+        <div class="product-card">
+          <a href="cookie-pies.html">
+            <img src="cookiepie.jpg" alt="Cookie Pies">
+            <div class="product-info">
+              <span>Explore Collection</span>
+              <h3>Cookie Pies</h3>
+              <p>Thick, indulgent cookie pies filled with rich chocolate and gooey caramel.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="product-card">
+          <a href="brownies.html">
+            <img src="brownie.jpg" alt="Brownies">
+            <div class="product-info">
+              <span>Explore Collection</span>
+              <h3>Brownies</h3>
+              <p>Luxury brownies finished with silky chocolate drizzle and premium toppings.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="product-card">
+          <a href="traybakes.html">
+            <img src="traybake.jpg" alt="Tray Bakes">
+            <div class="product-info">
+              <span>Explore Collection</span>
+              <h3>Tray Bakes</h3>
+              <p>Beautifully baked tray cakes, ideal for parties, gifting and events.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="product-card">
+          <a href="cookies.html">
+            <img src="cookie.jpg" alt="Cookies">
+            <div class="product-info">
+              <span>Explore Collection</span>
+              <h3>Cookies</h3>
+              <p>Freshly baked signature cookies with luxury fillings and textures.</p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="custom">
+    <div class="container">
+      <div class="luxury-banner">
+        <div>
+          <h2>Luxury <span>Custom Cakes</span></h2>
+          <p>
+            From birthdays and weddings to elegant events, each bespoke cake is designed around your vision and handcrafted to an exceptional standard.
+          </p>
+
+          <div class="price-tag">Prices start from £65</div>
+
+          <br>
+
+          <button class="btn btn-primary" onclick="openQuoteModal()">
+            Get A Quote
+          </button>
+        </div>
+
+        <img src="weddingcake.jpg" alt="Custom cake">
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Claire's Classy Cakes</h4>
+          <p>Luxury handmade cakes and desserts crafted for every special occasion.</p>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <a href="mailto:clairesclassycakeshop@gmail.com">clairesclassycakeshop@gmail.com</a>
+          <p>01234 567890</p>
+        </div>
+
+        <div>
+          <h4>Follow</h4>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">TikTok</a>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © 2026 Claire's Classy Cakes. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="quoteModal">
+    <div class="modal-box">
+      <button class="close" onclick="closeQuoteModal()">✕</button>
+
+      <h3>Request A Quote</h3>
+      <p>Tell us about your dream cake and we’ll prepare your enquiry email automatically.</p>
+
+      <div class="form-grid">
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="email" id="email" placeholder="Email Address">
+
+        <input type="text" id="event" placeholder="Occasion (Birthday, Wedding, etc.)">
+
+        <select id="size">
+          <option value="">Select Cake Size</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+          <option>Tiered Cake</option>
+        </select>
+
+        <input type="date" id="date" class="full">
+
+        <textarea id="details" placeholder="Describe colours, theme, flavours, number of servings and anything else you'd like."></textarea>
+
+        <button class="btn btn-primary full" onclick="sendQuote()">Send Enquiry</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+
+    function openQuoteModal() {
+      document.getElementById('quoteModal').classList.add('active');
+    }
+
+    function closeQuoteModal() {
+      document.getElementById('quoteModal').classList.remove('active');
+    }
+
+    function sendQuote() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const event = document.getElementById('event').value;
+      const size = document.getElementById('size').value;
+      const date = document.getElementById('date').value;
+      const details = document.getElementById('details').value;
+
+      const subject = encodeURIComponent('Custom Cake Quote Request');
+
+      const body = encodeURIComponent(
+`Name: ${name}
+Email: ${email}
+Occasion: ${event}
+Cake Size: ${size}
+Required Date: ${date}
+
+Cake Details:
+${details}`);
+
+      window.location.href = `mailto:clairesclassycakeshop@gmail.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+
+<script>
+function orderProduct(productName) {
+  const subject = "Order Enquiry";
+  const body = `Hi, I would like to order:\n\n${productName}\n\nQuantity:\nDate:\nCollection or Delivery:\n\nThank you`;
+
+  window.location.href =
+    `mailto:clairesclassycakeshop@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+</script>
+
+
+  <div class="modal" id="orderModal">
+  <div class="modal-box">
+    <button class="close" onclick="closeOrderModal()">✕</button>
+
+    <h3>Delivery Details</h3>
+    <p>Please enter your delivery information before checkout.</p>
+
+    <div class="form-grid">
+      <input type="text" id="orderName" placeholder="Full Name">
+      <input type="text" id="orderPhone" placeholder="Phone Number">
+
+      <input type="text" id="orderAddress" class="full" placeholder="Full Address">
+      <input type="text" id="orderPostcode" placeholder="Postcode">
+
+      <input type="date" id="orderDate">
+
+      <button class="btn btn-primary full" onclick="goToPayment()">
+        Continue to Payment
+      </button>
+    </div>
+  </div>
+</div>
+
+  <div class="modal" id="orderModal">
+  <div class="modal-box">
+    <button class="close" onclick="closeOrderModal()">✕</button>
+
+    <h3>Delivery Details</h3>
+    <p>Please enter your delivery information before checkout.</p>
+
+    <div class="form-grid">
+      <input type="text" id="orderName" placeholder="Full Name">
+      <input type="text" id="orderPhone" placeholder="Phone Number">
+
+      <input type="text" id="orderAddress" class="full" placeholder="Full Address">
+      <input type="text" id="orderPostcode" placeholder="Postcode">
+
+      <input type="date" id="orderDate">
+
+      <button class="btn btn-primary full" onclick="goToPayment()">
+        Continue to Payment
+      </button>
+    </div>
+  </div>
+</div>
+
+  <script>
+let selectedProductLink = "";
+
+function openOrderModal(paymentLink) {
+  selectedProductLink = paymentLink;
+  document.getElementById("orderModal").classList.add("active");
+}
+
+function closeOrderModal() {
+  document.getElementById("orderModal").classList.remove("active");
+}
+
+function goToPayment() {
+  const name = document.getElementById("orderName").value;
+  const address = document.getElementById("orderAddress").value;
+  const postcode = document.getElementById("orderPostcode").value;
+
+  if (!name || !address || !postcode) {
+    alert("Please fill in all required fields.");
+    return;
+  }
+
+  window.location.href = selectedProductLink;
+}
+</script>
+
+</body>
+</html>
+
+  
+
+</body>
+</html> 
+
     
     
   </style>
