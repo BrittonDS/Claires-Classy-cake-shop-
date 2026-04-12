@@ -851,6 +851,18 @@ ${details}`);
     }
   </script>
 
+<script>
+function orderProduct(productName) {
+  const subject = "Order Enquiry";
+  const body = `Hi, I would like to order:\n\n${productName}\n\nQuantity:\nDate:\nCollection or Delivery:\n\nThank you`;
+
+  window.location.href =
+    `mailto:clairesclassycakeshop@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+</script>
+
+  
+
 </body>
 </html>
  
