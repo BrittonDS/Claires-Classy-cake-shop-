@@ -8,10 +8,10 @@
     <!-- Kinderella -->
     <div class="product-card">
       <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80">
+        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80" alt="Kindarella Cookie Pie">
       </div>
       <div class="product-info">
-        <h3>Kinderella Cookie Pie</h3>
+        <h3>Kindarella Cookie Pie</h3>
         <p>Chocolate cookie pie with hazelnut filling.</p>
         <div class="bottom">
           <span>£4.49</span>
@@ -23,7 +23,7 @@
     <!-- Double Chocolate -->
     <div class="product-card">
       <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=800&q=80">
+        <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=800&q=80" alt="Double Chocolate Cookie Pie">
       </div>
       <div class="product-info">
         <h3>Double Chocolate Cookie Pie</h3>
@@ -38,7 +38,7 @@
     <!-- Biscoff -->
     <div class="product-card">
       <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1631397833242-fc6213046352?auto=format&fit=crop&w=800&q=80">
+        <img src="https://images.unsplash.com/photo-1631397833242-fc6213046352?auto=format&fit=crop&w=800&q=80" alt="Biscoff Cookie Pie">
       </div>
       <div class="product-info">
         <h3>Biscoff Cookie Pie</h3>
@@ -50,10 +50,10 @@
       </div>
     </div>
 
-    <!-- Funfetti Chocolate -->
+    <!-- Funfetti -->
     <div class="product-card">
       <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1607478900766-efe13248b125?auto=format&fit=crop&w=800&q=80">
+        <img src="https://images.unsplash.com/photo-1607478900766-efe13248b125?auto=format&fit=crop&w=800&q=80" alt="Funfetti Chocolate Pie">
       </div>
       <div class="product-info">
         <h3>Funfetti Chocolate Pie</h3>
@@ -65,13 +65,15 @@
       </div>
     </div>
 
+  </div>
+
 </section>
 
 <style>
 .cookie-section {
   text-align: center;
   padding: 80px 20px;
-  background: #f7f7f7;
+  background: #ffffff; /* fixed to match top */
 }
 
 .cookie-section h2 {
@@ -98,15 +100,19 @@
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  transition: 0.3s;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
 }
 
 .img-wrap {
   height: 200px;
   overflow: hidden;
-  position: relative;
 }
 
 .img-wrap img {
@@ -149,10 +155,10 @@ button {
   padding: 8px 16px;
   border-radius: 999px;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
 
 button:hover {
   background: #333;
 }
 </style>
-
