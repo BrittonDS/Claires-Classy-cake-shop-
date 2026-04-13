@@ -1103,6 +1103,79 @@
     box-shadow: 0 30px 60px rgba(0,0,0,0.08);
 }
 
+
+
+  /* ===== MOBILE OVERRIDES (SAFE - DOES NOT AFFECT DESKTOP) ===== */
+@media (max-width: 768px) {
+
+  /* HERO LAYOUT */
+  .hero-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    align-items: center !important;
+  }
+
+  /* FIX IMAGE POSITION */
+  .hero-image {
+    margin-top: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .hero-image img {
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  /* FIX FLOATING CARD */
+  .floating-card {
+    position: static !important;
+    margin-top: 1rem !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    box-shadow: none !important;
+  }
+
+  /* PRODUCT GRID STACK */
+  .product-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* SECTION SPACING */
+  .hero,
+  .section {
+    padding: 3rem 0 !important;
+  }
+
+  /* TEXT IMPROVEMENTS */
+  .hero h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .hero p {
+    font-size: 1rem !important;
+  }
+
+  /* BUTTONS FULL WIDTH (OPTIONAL BUT NICE) */
+  .hero-buttons {
+    flex-direction: column !important;
+  }
+
+  .btn {
+    width: 100% !important;
+  }
+
+  /* NAV DROPDOWN FIX */
+  .nav-links {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
     
     
   </style>
