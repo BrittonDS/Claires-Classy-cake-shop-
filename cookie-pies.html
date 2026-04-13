@@ -5,37 +5,6 @@
 
   <div class="products">
 
-    <!-- Nutella -->
-    <div class="product-card">
-      <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?auto=format&fit=crop&w=800&q=80">
-        <div class="badge">Bestseller</div>
-      </div>
-      <div class="product-info">
-        <h3>Nutella Cookie Pie</h3>
-        <p>Thick cookie pie with a molten Nutella centre.</p>
-        <div class="bottom">
-          <span>£15</span>
-          <button onclick="window.location.href='YOUR_SUMUP_LINK'">Order</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Biscoff -->
-    <div class="product-card">
-      <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1631397833242-fc6213046352?auto=format&fit=crop&w=800&q=80">
-      </div>
-      <div class="product-info">
-        <h3>Biscoff Cookie Pie</h3>
-        <p>Creamy Biscoff centre with caramel biscuit flavour.</p>
-        <div class="bottom">
-          <span>£15</span>
-          <button onclick="window.location.href='YOUR_SUMUP_LINK'">Order</button>
-        </div>
-      </div>
-    </div>
-
     <!-- Kinderella -->
     <div class="product-card">
       <div class="img-wrap">
@@ -45,23 +14,8 @@
         <h3>Kinderella Cookie Pie</h3>
         <p>Chocolate cookie pie with hazelnut filling.</p>
         <div class="bottom">
-          <span>£15</span>
-          <button onclick="window.location.href='YOUR_SUMUP_LINK'">Order</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Funfetti -->
-    <div class="product-card">
-      <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1607478900766-efe13248b125?auto=format&fit=crop&w=800&q=80">
-      </div>
-      <div class="product-info">
-        <h3>Funfetti Cookie Pie</h3>
-        <p>Vanilla cookie pie packed with sprinkles.</p>
-        <div class="bottom">
-          <span>£15</span>
-          <button onclick="window.location.href='YOUR_SUMUP_LINK'">Order</button>
+          <span>£4.49</span>
+          <button onclick="window.location.href='YOUR_STRIPE_LINK'">Buy</button>
         </div>
       </div>
     </div>
@@ -75,8 +29,53 @@
         <h3>Double Chocolate Cookie Pie</h3>
         <p>Rich chocolate cookie pie with melted chunks.</p>
         <div class="bottom">
-          <span>£15</span>
-          <button onclick="window.location.href='YOUR_SUMUP_LINK'">Order</button>
+          <span>£4.49</span>
+          <button onclick="window.location.href='YOUR_STRIPE_LINK'">Buy</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Biscoff -->
+    <div class="product-card">
+      <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1631397833242-fc6213046352?auto=format&fit=crop&w=800&q=80">
+      </div>
+      <div class="product-info">
+        <h3>Biscoff Cookie Pie</h3>
+        <p>Creamy Biscoff centre with caramel biscuit flavour.</p>
+        <div class="bottom">
+          <span>£4.49</span>
+          <button onclick="window.location.href='YOUR_STRIPE_LINK'">Buy</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Funfetti Chocolate -->
+    <div class="product-card">
+      <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1607478900766-efe13248b125?auto=format&fit=crop&w=800&q=80">
+      </div>
+      <div class="product-info">
+        <h3>Funfetti Chocolate Pie</h3>
+        <p>Chocolate pie with colourful funfetti sprinkles.</p>
+        <div class="bottom">
+          <span>£4.49</span>
+          <button onclick="window.location.href='YOUR_STRIPE_LINK'">Buy</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Raspberry Ruffle -->
+    <div class="product-card">
+      <div class="img-wrap">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80">
+      </div>
+      <div class="product-info">
+        <h3>Raspberry Ruffle</h3>
+        <p>Chocolate cookie pie with raspberry coconut filling.</p>
+        <div class="bottom">
+          <span>£4.49</span>
+          <button onclick="window.location.href='YOUR_STRIPE_LINK'">Buy</button>
         </div>
       </div>
     </div>
@@ -103,7 +102,6 @@
   margin-bottom: 50px;
 }
 
-/* GRID FIX (THIS CENTERS EVERYTHING) */
 .products {
   max-width: 1100px;
   margin: 0 auto;
@@ -130,16 +128,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.badge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: #fff;
-  padding: 5px 12px;
-  border-radius: 999px;
-  font-size: 10px;
 }
 
 .product-info {
